@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_image_sender_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:gravity="end"
+    android:orientation="horizontal">
+
+    <include layout="@layout/msg_state_layout" />
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/chat_bubble_right_selector"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_chat_my_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <include layout="@layout/im_sender_ico_layout" />
+
+</LinearLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/setionView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom"
+        android:textColor="@color/font_grey_s"
+        android:text="联系人"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/search_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.milanac007.demo.im.ui.CircleImageView
+            android:id="@+id/userAvatar"
+            style="@style/Small.CropImageView"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="12dip"
+            android:src="@drawable/male"
+            android:visibility="visible"/>
+
+
+        <com.milanac007.demo.im.ui.GlideImageView
+            android:id="@+id/groupAvatar"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center_vertical"
+            android:background="@color/font_grey_s"
+            android:src="@drawable/group_default"
+            android:layout_marginLeft="12dip"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/peerEntityNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/remarkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:textSize="13sp"
+                android:text="备注"
+                android:textColor="@color/font_grey_s"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+

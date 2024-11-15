@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/system_msg_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:visibility="visible"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/im_date_time_layout" />
+
+    <TextView
+        android:id="@+id/system_msg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/dialog_divider_line"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:padding="5dp"
+        android:text="你已经拿到123dkfldkflkl健康的减肥快点击付款的九分裤" />
+
+</LinearLayout>

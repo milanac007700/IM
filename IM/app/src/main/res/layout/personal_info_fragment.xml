@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f0f0f0"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/fragment_head1" />
+
+    <com.milanac007.demo.im.ui.CircleImageView
+        android:id="@+id/buddyHeadIcon"
+        style="@style/Small.CropImageView"
+        android:layout_width="72dip"
+        android:layout_height="72dip"
+        android:src="@mipmap/male"
+        android:layout_margin="15dp"/>
+    <TextView
+        android:id="@+id/nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="455"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/buddyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/font_grey_s"
+        android:text="123"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/font_grey_s"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:textSize="20sp"
+            android:text="IM账号"/>
+
+        <TextView
+            android:id="@+id/buddyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/font_grey_s"
+            android:background="@null"
+            android:text=""
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:textSize="20sp"
+            android:text="手机号"/>
+
+        <TextView
+            android:id="@+id/buddyMobile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/font_grey_s"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/look_up_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/font_grey_s"/>
+
+    <LinearLayout
+        android:id="@+id/ll_mail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:text="邮箱"/>
+
+        <TextView
+            android:id="@+id/buddyEmail"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/font_grey_s"
+            android:gravity="center_vertical|left"
+            android:layout_marginRight="0dp"
+            android:textSize="18sp"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/write_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:drawableLeft="@mipmap/email_icon" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_friend_msg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_yes_style"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="添加到通讯录"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/send_text_msg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_yes_style"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="发消息"/>
+
+    <TextView
+        android:id="@+id/voice_chat_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="-10dp"
+        android:textColor="@color/text_blue"
+        android:background="@drawable/btn_solid_border_style"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="语音聊天"/>
+
+</LinearLayout>

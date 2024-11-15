@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.milanac007.demo.im.ui.CircleImageView
+        android:id="@+id/icon_chat_me"
+        style="@style/Small.CropImageView"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:src="@mipmap/male" />
+
+</merge>

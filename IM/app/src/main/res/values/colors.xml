@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="bg_gray">#F8F2F2</color>
+    <color name="gray">#808080</color> <!-- 灰色 -->
+    <color name="background">#E8E8E8</color>
+    <color name="title_background">#1E6EBE</color>
+    <color name="title_text">#FFFFFF</color>
+    <color name="process_text">#0000ee</color>
+    <color name="text_blue">#3399ff</color>
+    <color name="welcome_title_text">#2d8df9</color>
+    <color name="construction_text">#5f5f5f</color>
+    <color name="help_tittle_text">#535353</color>
+    <color name="gray_line">#d6d6d6</color>
+    <color name="dialog_line">#D7D7D7</color>
+
+    <color name="dialog_bg">#F5F4F3</color>
+    <color name="dialog_text">#8F8C87</color>
+    <color name="dialog_divider_line">#E8E7E4</color>
+    <color name="txt_lowpower">#ef4d5f</color>
+
+    <color name="text_video_record">#000000</color>
+
+    <color name="text_orange">#FF5800</color>
+    <color name="text_light_orange">#f2b40b</color>
+    <color name="holo_orange_dark">#ff8800</color>
+
+    <color name="dialog_btn_ok_normal">#FF6600</color>
+    <color name="dialog_btn_ok_pressed">#DB5700</color>
+    <color name="dialog_btn_cancel_normal">#BFBFBF</color>
+    <color name="dialog_btn_cancel_pressed">#9A9A9A</color>
+    <color name="dialog_text_green">#00959E</color>
+    <color name="dialog_text_grey">#5D5D5D</color>
+    <color name="dialog_btn_normal">#FFFFFF</color>
+    <color name="dialog_btn_pressed">#E8E8E8</color>
+
+    <color name="common_divider_line">#E3E3E3</color>
+    <color name="transparent">#00000000</color>
+    <color name="skyblue">#87CEEB</color> <!-- 天蓝色 -->
+    <color name="font_grey_l">#202020</color>
+
+    <color name="line_e3">#e3e3e3</color>
+    <color name="pink_red">#F07184</color>
+    <color name="head_icon_bg_female">#f491a0</color>
+    <color name="head_icon_bg_male">#8dd6e9</color>
+    <color name="highlight">#f3f3f3</color>
+    <color name="font_green">#3cb879</color>
+    <color name="font_grey_s">#aaaaaa</color>
+    <color name="font_grey_m">#808080</color>
+    <color name="fragment_bg">#f7f7f7</color>
+    <color name="color4f000">#4f000000</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="camera_bg">#99000000</color>
+    <color name="label_green">#2fb266</color>
+    <color name="label_light_green">#22AC38</color>
+    <color name="color_f9f9f9_bg">#f9f9f9</color>
+    <color name="font_select">#66a9e7c8</color>
+    <color name="font_gray_light">#d3d3d3</color>
+    <color name="title_divider">#bfbfbf</color>
+    <color name="bg_blue">#4e8cf9</color>
+    <color name="color_959595">#959595</color>
+    <color name="color_2269e6">#2269e6</color>
+    <color name="bg_light_white">#fafafa</color>
+    <color name="bg_light_blue">#8FCCFE</color>
+    <color name="bg_black">#000000</color>
+    <color name="font_gray_black">#505b7b</color>
+    <color name="red">#ff0000</color>
+    <color name="alpha_white">#80FFFFFF</color>
+    <color name="alpha_gray">#BFf3f3f3</color>
+    <color name="list_divider">#ededed</color>
+</resources>

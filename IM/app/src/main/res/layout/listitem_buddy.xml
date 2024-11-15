@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/imageBuddyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+<!--        android:src="@drawable/conversationlist_default_icon"-->
+        <RelativeLayout
+            android:id="@+id/unreadlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textholder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:text="123"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/msg_new_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/textholder"
+                android:layout_alignRight="@id/textholder"
+                android:minWidth="30dp"
+                android:scaleType="fitXY"
+                 />
+<!--            android:src="@drawable/msg_unrean_mark"-->
+            <TextView
+                android:id="@+id/textNewMsgTip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:text="123"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/unreadlayout"
+            android:layout_toRightOf="@id/imageBuddyIcon"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/textBuddyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textBuddyMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:lines="1"
+                android:text="TextView"
+                android:textColor="#c3c3c3" />
+
+        </LinearLayout>
+
+        
+    </RelativeLayout>
+
+</LinearLayout>

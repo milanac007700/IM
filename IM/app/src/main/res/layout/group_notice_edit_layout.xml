@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_head1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_e3" />
+
+    <LinearLayout
+        android:id="@+id/group_admin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/item_white_bg"
+        android:visibility="visible">
+
+        <com.milanac007.demo.im.ui.CircleImageView
+            android:id="@+id/iv_photo"
+            style="@style/Small.CropImageView"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/activity_home_photo" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="陈建宁"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/updated_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="xxxx-xx-xx xx:xx"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_e3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <EditText
+            android:id="@+id/group_notice_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="请编辑群公告"
+            android:padding="15dip"
+            android:textColor="@color/font_grey_l"
+            android:textColorHint="@color/font_gray_light"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/edit_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/admin_label"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        android:textColor="#888888"
+        android:visibility="gone"
+        android:text="-----只有群主可以编辑-----"/>
+
+</LinearLayout>

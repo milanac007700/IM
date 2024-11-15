@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_head1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_e3" />
+
+    <ScrollView
+        android:id="@+id/detail_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/font_grey_s"
+                android:textSize="18sp"
+                android:gravity="bottom"
+                android:text="备注名"/>
+
+            <LinearLayout
+                android:id="@+id/remarknameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip">
+
+                    <EditText
+                        android:id="@+id/remarkname_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:hint="设置备注"
+                        android:textColorHint="@color/font_grey_s"
+                        android:gravity="bottom"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/remarkname_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/del_icon"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/remarkname_bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/label_light_green" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="@color/font_grey_s"
+                android:gravity="bottom"
+                android:textSize="18sp"
+                android:text="邮箱"/>
+
+            <TextView
+                android:id="@+id/emailaddress"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="@color/font_grey_s"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:text="暂无"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="@color/font_grey_s"
+                android:gravity="bottom"
+                android:textSize="18sp"
+                android:text="电话号码"/>
+
+
+            <LinearLayout
+                android:id="@+id/phone_edit_default_layout"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/phone_edit_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="2dp"
+                    android:singleLine="true"
+                    android:gravity="bottom"
+                    android:textSize="15sp"
+                    android:text=""/>
+
+                <View
+                    android:id="@+id/phone_bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/font_grey_s" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneAddLayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip">
+
+                    <EditText
+                        android:id="@+id/phone_edit_1"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:hint="添加电话号码"
+                        android:textColorHint="@color/font_grey_s"
+                        android:background="@color/transparent"
+                        android:gravity="bottom"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/phone_del_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/del_icon"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/label_light_green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneAddLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip">
+
+                    <EditText
+                        android:id="@+id/phone_edit_2"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:hint="添加电话号码"
+                        android:textColorHint="@color/font_grey_s"
+                        android:background="@color/transparent"
+                        android:gravity="bottom"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/phone_del_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/del_icon"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/label_light_green" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

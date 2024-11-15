@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_f9f9f9_bg">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/item_white_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:src="@mipmap/bg_search" />
+
+        <TextView
+            android:id="@+id/search_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/search_img"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/g_search"
+            android:textColor="@color/font_grey_s"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/search_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/search_img"
+            android:paddingRight="15dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:hint="@string/g_search"
+                android:background="@color/transparent"
+                android:textColor="@color/font_grey_s"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/del_icon" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/search_line"
+            android:layout_width="15dip"
+            android:layout_height="0.9dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/search_line"
+            android:background="@color/line_e3"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_friend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/item_white_bg" >
+
+        <ImageView
+            android:id="@+id/my_friend_img"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@mipmap/my_friend"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/my_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/my_friend_img"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/g_my_friend"
+            android:textColor="@color/font_grey_l"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/unread_view"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_toRightOf="@id/my_friend_name"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/unread_icon"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#ffffff"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/my_friend_line"
+            android:layout_width="15dip"
+            android:layout_height="0.9dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/my_friend_line"
+            android:background="@color/line_e3"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!--群聊-->
+    <RelativeLayout
+        android:id="@+id/my_groupChat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/item_white_bg" >
+
+        <ImageView
+            android:id="@+id/group_chat_img"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@mipmap/my_group" />
+
+        <TextView
+            android:id="@+id/group_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/group_chat_img"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/g_group_chat"
+            android:textColor="@color/font_grey_l"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/group_chat_line"
+            android:layout_width="15dip"
+            android:layout_height="0.9dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/group_chat_line"
+            android:background="@color/line_e3"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

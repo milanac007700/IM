@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_outside_pop_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/volume_pop_bg"
+        android:orientation="vertical">
+
+         <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/voice_pop_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/voice_img_stop"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/voice_pop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/volume_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/volume_img"/>
+
+                <com.milanac007.demo.im.ui.VolumeView
+                    android:id="@+id/voice_pop_view"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/voice_pop_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:textColor="@color/white"
+            android:text="@string/m_finger_slide_up"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.milanac007.demo.im">
+    <!-- 允许应用程序完全使用网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许应用程序改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 允许应用程序改变WIFI连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 允许应用程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许应用程序访问WIFI网卡的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="IM"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/IMBaseTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name,android:label,android:theme,android:icon">
+        <!-- 支持全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.9" />
+        <service
+            android:name=".service.IMService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name=".receiver.BringToFrontReceiver">
+            <intent-filter>
+                <action android:name="com.milanac007.demo.im.receiver.BringToFront" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+
+            <!--
+          Android8.0的bug: IllegalStateException: Only fullscreen opaque activities can request oritation 只有全屏非透明的activity才需要oritation
+          解决办法：1、 样式中窗口透明属性windowIsTranslucent设为false 2、去掉android:screenOrientation
+          同时发现 window背景透明会导致刘海屏上部漏出屏幕底色
+           故这里采用方式1
+            -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"> <!-- 此种模式承担着测量软键盘高度的任务 -->
+            <!-- android:windowSoftInputMode="adjustPan|stateHidden"> -->
+            <!-- 初始状态为隐藏键盘（stateHidden）， 键盘弹起时，滑动内容以使editText不被盖上 -->
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activity.ConfigActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+    </application>
+
+</manifest>

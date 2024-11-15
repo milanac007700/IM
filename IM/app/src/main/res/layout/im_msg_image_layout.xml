@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_image_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:visibility="visible"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/im_date_time_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/im_selected_state_layout" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ViewStub
+                android:id="@+id/im_image_sender_view_stub"
+                android:inflatedId="@id/im_image_sender_layout"
+                android:layout="@layout/im_image_sender_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"/>
+
+            <ViewStub
+                android:id="@+id/im_image_receiver_view_stub"
+                android:inflatedId="@id/im_image_receiver_layout"
+                android:layout="@layout/im_image_receiver_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+<!--            <include layout="@layout/im_image_sender_layout" />-->
+<!--            <include layout="@layout/im_image_receiver_layout" />-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

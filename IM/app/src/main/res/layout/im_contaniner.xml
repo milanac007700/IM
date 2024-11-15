@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_neterr"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@mipmap/net_disable_bg" >
+
+        <ImageView
+            android:id="@+id/icon_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/icon_infomation" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/icon_info"
+            android:text="无法连接到服务器"
+            android:textColor="#d8cfb4" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedfd3" />
+
+    <LinearLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f4f4f4" >
+
+            <TextView
+                android:id="@+id/tab_message"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableTop="@mipmap/tab_message_selected"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="消息"
+                android:textColor="#a4bde8" />
+
+            <TextView
+                android:id="@+id/msg_new_tip"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@mipmap/unread_icon"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:text="00"
+                android:visibility="invisible"/>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f4f4f4">
+
+            <TextView
+                android:id="@+id/tab_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableTop="@mipmap/tab_contacts_default"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="通讯录"
+                android:textColor="#c0c0c0" />
+
+            <ImageView
+                android:id="@+id/contact_new_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@mipmap/unread_icon"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f4f4f4" >
+
+            <TextView
+                android:id="@+id/tab_app"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableTop="@mipmap/tab_app_default"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="应用"
+                android:textColor="#c0c0c0" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f4f4f4">
+
+            <TextView
+                android:id="@+id/tab_mine"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableTop="@mipmap/tab_my_default"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="我"
+                android:textColor="#c0c0c0" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

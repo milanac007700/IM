@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_head1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="20dp"
+        android:background="@color/line_e3" />
+
+    <RelativeLayout
+        android:id="@+id/group_chat_invite_confirm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_white_bg"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/invite_confirm_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="群聊邀请确认"/>
+
+        <com.milanac007.demo.im.ui.SwitchView
+            android:id="@+id/confirm_switchview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:isOpened="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirm_switchview"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/font_grey_s"
+            android:textSize="13dp"
+            android:text="启用后，群成员需群主确认才能邀请朋友进群。扫描二维码进群将同时停用。"
+
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/line_e3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="20dp"
+        android:background="@color/line_e3" />
+
+    <TextView
+        android:id="@+id/change_group_admin_textview"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="16sp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/item_white_bg"
+        android:text="群主管理权转让" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/line_e3" />
+
+</LinearLayout>

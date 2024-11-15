@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/fragment_head1" />
+
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_mine"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textColor="@color/font_grey_m"
+        android:textSize="18sp"
+        android:text="融易工作 v1.0.0" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/font_grey_s" />
+
+    <FrameLayout
+        android:id="@+id/develoerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/item_white_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:text="开发者"/>
+
+        <TextView
+            android:id="@+id/developerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/font_grey_s"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@drawable/arrow_to_right"
+            android:text="milanac007"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/font_grey_s" />
+
+    <FrameLayout
+        android:id="@+id/versionUpdateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/item_white_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:text="版本更新"/>
+
+        <TextView
+            android:id="@+id/newVersion"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/conversation_new"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="100dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@drawable/arrow_to_right"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/font_grey_s" />
+
+</LinearLayout>

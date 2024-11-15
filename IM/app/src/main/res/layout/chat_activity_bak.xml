@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical">
+
+<!--    <include layout="@layout/fragment_head1" />-->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_e3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/chat_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="3dp"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_e3" />
+
+        <LinearLayout
+            android:id="@+id/tabbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="#f4f4f4"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/icon_transmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_transmit"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/icon_collection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_collection"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/icon_del"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_del"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/icon_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_email"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msg_send_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/msg_volume_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/msg_volumebg"
+                android:visibility="visible" />
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="9dp">
+
+                <LinearLayout
+                    android:id="@+id/text_mode_ayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/msg_edit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="102dip"
+                        android:minHeight="34dip"
+                        android:background="@drawable/msg_edit_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="6dp"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/msg_face_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dip"
+                        android:src="@drawable/msg_facebg" />
+
+                </LinearLayout>
+
+
+                <com.milanac007.demo.im.ui.VoiceSendButton
+                    android:id="@+id/msg_voice_send_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dip"
+                    android:background="@mipmap/search_bg"
+                    android:gravity="center"
+                    android:text="@string/m_press_speak"
+                    android:textColor="@color/font_grey_l"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/msg_send_button"
+                    android:layout_width="50dip"
+                    android:layout_height="30dip"
+                    android:layout_marginStart="5dip"
+                    android:layout_marginEnd="10dip"
+                    android:background="@mipmap/send_select_bg"
+                    android:text="@string/g_send"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/msg_picture_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dip"
+                    android:layout_marginEnd="10dip"
+                    android:src="@drawable/msg_picbg"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_e3" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/msg_face_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/msg_face_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip" />
+
+                <LinearLayout
+                    android:id="@+id/msg_face_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/msg_pic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dip"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/msg_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/msg_camera_bg"
+                        android:gravity="center"
+                        android:text="@string/m_make_photo"
+                        android:textColor="@color/font_grey_s"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/msg_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/msg_picture_bg"
+                        android:gravity="center"
+                        android:text="@string/m_pic"
+                        android:textColor="@color/font_grey_s"
+                        android:layout_marginRight="25dp"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/msg_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/add_video"
+                        android:gravity="center"
+                        android:text="@string/m_make_micro_video"
+                        android:textColor="@color/font_grey_s"
+                        android:layout_marginRight="25dp"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/msg_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/im_call_icon"
+                        android:gravity="center"
+                        android:text="@string/m_call"
+                        android:textColor="@color/font_grey_s"
+                        android:layout_marginRight="25dp"
+                        android:textSize="12dip" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

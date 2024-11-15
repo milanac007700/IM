@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fragment_bg"
+    android:id="@+id/single_chat_setting_layout">
+
+    <include layout="@layout/fragment_head1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/line_e3" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp">
+
+        <com.milanac007.demo.im.ui.CircleImageView
+            android:id="@+id/buddy_ico"
+            style="@style/Small.CropImageView"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/male" />
+
+        <ImageView
+            android:id="@+id/add_user_to_group"
+            style="@style/Small.CropImageView"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/add_user_for_group_chat" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/line_e3" />
+
+    <TextView
+        android:id="@+id/del_all_single_chats"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="16sp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/item_white_bg"
+        android:text="清空聊天记录"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/line_e3" />
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/editRegUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="用户名：" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRegUser"
+        android:layout_alignRight="@+id/editRegUser"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editRegUser"
+        android:layout_marginTop="14dp"
+        android:hint="昵称："
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/editRegPwd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRegUser"
+        android:layout_alignRight="@+id/editRegUser"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editNickName"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="密码："
+        android:inputType="textPassword" />
+    
+    <EditText
+        android:id="@+id/editRegPwd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRegUser"
+        android:layout_alignRight="@+id/editRegUser"
+        android:layout_below="@+id/editRegPwd1"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="确认密码：" 
+        android:inputType="textPassword"/>
+    
+    <EditText
+        android:id="@+id/editRegEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRegPwd2"
+        android:layout_alignRight="@+id/editRegUser"
+        android:layout_below="@+id/editRegPwd2"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="邮箱："
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btnRegSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editRegPwd2"
+        android:layout_alignRight="@+id/editRegUser"
+        android:layout_below="@+id/editRegPwd2"
+        android:layout_marginTop="105dp"
+        android:background="@drawable/button_bg"
+        android:text="注册"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

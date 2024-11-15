@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dip"
+    android:layout_marginLeft="12dip"
+    android:layout_marginRight="12dip"
+    android:layout_marginTop="8dip"
+    android:orientation="horizontal"
+    android:background="@color/fragment_bg"
+    android:visibility="visible" >
+<!--    android:theme="@style/Anim_fade_transparent"-->
+
+    <TextView
+        android:id="@+id/search_content_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="36dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/font_button_bg"
+        android:textColor="@color/skyblue"
+        android:gravity="center"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:textSize="15sp"
+        android:drawableLeft="@drawable/bg_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:background="@drawable/search_bg">
+
+        <ImageView
+            android:id="@+id/search_content_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+           android:layout_margin="5dp"
+            android:src="@drawable/bg_search" />
+
+        <EditText
+            android:id="@+id/content_edittext"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="@string/g_search"
+            android:textColor="@color/font_grey_s"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/del_content_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:src="@drawable/del_icon"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

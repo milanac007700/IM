@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_white_bg"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.milanac007.demo.im.ui.GlideImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/group_item_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@mipmap/group_default"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/group_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="OA项目"/>
+
+    <TextView
+        android:id="@+id/group_item_member_count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/font_grey_s"
+        android:text="(0)"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/select_state_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:src="@mipmap/checkbox_off"
+        android:visibility="gone" />
+
+
+</LinearLayout>

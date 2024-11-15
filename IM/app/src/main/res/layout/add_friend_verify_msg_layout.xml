@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_head1" />
+
+    <EditText
+        android:id="@+id/verify_msg_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:singleLine="false"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:background="@drawable/msg_edit_bg"
+        android:gravity="top|left"
+        android:hint="@string/s_input_verify_info"
+        android:padding="8dip"
+        android:textSize="13sp"
+        android:maxLength="130"/>
+
+    <TextView
+        android:id="@+id/remain_wordnum_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="13sp"
+        android:gravity="right"
+        android:text="您还可以输入130个字"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

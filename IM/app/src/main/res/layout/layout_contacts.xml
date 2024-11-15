@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f9f9f9_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/fragment_head1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/tabbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2px"
+                android:background="#dedfd3" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" >
+
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/his_search_bg"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="搜索(分机号、姓名或姓名首字母)"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="15"
+                android:textColor="#b9bdc7" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/listLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tabbar"
+            android:layout_below="@id/searchLayout" >
+
+            <com.mengle.lib.wiget.BaseExpandableListView
+                android:id="@+id/contactList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#d7d7d7"
+                android:dividerHeight="1px"
+                android:showDividers="middle" />
+
+            <RelativeLayout
+                android:id="@+id/searchResultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/directcall"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/his_list_bg"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/callnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableRight="@drawable/item_call"
+                        android:text="直接拨打" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/searchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/directcall"
+                    android:divider="#d7d7d7"
+                    android:dividerHeight="0.5dp" >
+                </ListView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

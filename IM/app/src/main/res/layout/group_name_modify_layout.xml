@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:id="@+id/group_name_modify_layout"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_head1" />
+    <TextView
+        android:id="@+id/tip_label"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@color/font_grey_s"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:text="群聊名称"/>
+
+    <LinearLayout
+        android:id="@+id/remarknameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip">
+
+            <EditText
+                android:id="@+id/remarkname_edittext"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:imeOptions="actionDone"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:textColor="@color/font_grey_s"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/remarkname_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:src="@drawable/del_icon"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/remarkname_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/label_light_green" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+include ':app'
+include ':pulltorefresh'
+
+include ':PickerPreviewPhoto'
+project(':PickerPreviewPhoto').projectDir = new File('./PickerPreviewPhoto/app')
+
+include ':VideoCrop'
+project(':VideoCrop').projectDir = new File('./PickerPreviewPhoto/VideoCropDemo/app')
+//include ':androidffmpeglibrary'
+//project(':androidffmpeglibrary').projectDir = new File('../PickerPreviewPhoto/VideoCropDemo/androidffmpeglibrary')
+
+include ':FFmpeg'
+project(':FFmpeg').projectDir = new File('./PickerPreviewPhoto/VideoCropDemo/ffmpeg-android-demo/app')
+
+
+include ':ScanCode'
+project(':ScanCode').projectDir = new File('./PickerPreviewPhoto/ScanCodeDemo/app')
+
+
+rootProject.name = "IM"

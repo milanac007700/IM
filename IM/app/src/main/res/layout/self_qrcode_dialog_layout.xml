@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/operate_list_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <com.milanac007.demo.im.ui.CircleImageView
+            android:id="@+id/iv_photo"
+            style="@style/Small.CropImageView"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:src="@mipmap/activity_home_photo"
+            android:visibility="visible"/>
+
+        <com.milanac007.demo.im.ui.GlideImageView
+            android:id="@+id/group_avatar"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:src="@mipmap/group_default"
+            android:background="@color/font_grey_s"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/buddy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="陈建宁"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/rongyihao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="IM账号：jnchen"
+                android:textColor="#888888"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/qrcode_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/erweima" />
+
+    <TextView
+        android:id="@+id/qrcode_label"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#888888"
+        android:text="扫一扫，加我IM账号"/>
+
+</LinearLayout>
